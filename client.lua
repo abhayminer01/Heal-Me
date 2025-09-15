@@ -1,0 +1,6 @@
+RegisterNetEvent('simpleHeal:healPlayer')
+AddEventHandler('simpleHeal:healPlayer', function()
+    local ped = PlayerPedId()
+    SetEntityHealth(ped, Config.MaxHealth)
+    ClearPedBloodDamage(ped)
+end)
